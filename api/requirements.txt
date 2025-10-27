@@ -1,0 +1,7 @@
+fastapi==0.115.0
+uvicorn==0.30.6
+psycopg[binary]==3.2.1
+python-dotenv==1.0.1
+scikit-learn==1.5.2
+nltk==3.9.1
+pandas==2.2.3

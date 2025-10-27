@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bible Verse Retrieval - Placeholder App</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 2rem; }
+      code { background: #f3f3f3; padding: 2px 4px; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <h1>Bible Verse Retrieval - App</h1>
+  <p>This is a minimal placeholder UI. The API should be at <code>http://localhost:5001</code>.</p>
+    <button id="check">Check API health</button>
+    <pre id="out"></pre>
+    <script>
+      const out = document.getElementById('out');
+      document.getElementById('check').onclick = async () => {
+        out.textContent = 'Loading...';
+        try {
+          const res = await fetch('http://localhost:5001/health');
+          const data = await res.json();
+          out.textContent = JSON.stringify(data, null, 2);
+        } catch (e) {
+          out.textContent = String(e);
+        }
+      };
+    </script>
+  </body>
+</html>
