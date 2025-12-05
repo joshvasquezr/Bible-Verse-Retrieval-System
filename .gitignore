@@ -1,0 +1,24 @@
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# virtual env
+venv/
+env/
+ENV/
+
+# models
+*.npz
+*.pkl
+
+# env files
+.env
+
+# ide
+.vscode/
+.idea/
+*.swp
+*.swo
